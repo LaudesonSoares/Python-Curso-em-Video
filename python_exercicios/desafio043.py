@@ -16,11 +16,11 @@ IMC = peso/(altura ** 2)
 
 if IMC < 18.5:
     print('Seu IMC é {:.2f}: Abaixo do Peso.'.format(IMC))
-elif IMC >= 18.5 and IMC < 25:
+elif IMC < 25:
     print('Seu IMC é {:.2f}: Peso Ideal'.format(IMC))
-elif IMC >= 25 and IMC < 30:
+elif IMC < 30:
     print('Seu IMC é {:.2f}: Sobrepeso'.format(IMC))
-elif IMC >= 30 and IMC < 40:
+elif IMC < 40:
     print('Seu IMC é {:.2f}: Obesidade'.format(IMC))
 else:
     print('Seu IMC é {:.2f}: Obesidade Mórbida'.format(IMC))

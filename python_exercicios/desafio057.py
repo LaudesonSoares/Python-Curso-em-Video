@@ -2,8 +2,8 @@
 # Caso esteja errado, peça a digitação novamente até ter um valor correto.
 
 sexo = ''
-while sexo != 'M' and sexo != 'F':
+while sexo not in ['M', 'F']:
     sexo = str(input('Informe o seu sexo: [M/F] ')).upper().strip()[0] #[] fatiamento para pegar a primeira letra.
-    if sexo != 'M' and sexo != 'F':
+    if sexo not in ['M', 'F']:
         print('Dados inválidos. Favor, digite "M" para masculino ou "F" para feminino.')
 print('Sexo {} registrado com sucesso.'.format(sexo))

@@ -3,7 +3,7 @@
 # No final, mostre a lista ordenada na tela.
 
 lista = []
-for c in range(0, 5):
+for c in range(5):
     n = int(input('Digite um valor: '))
     if c == 0 or n > lista[-1]: #Teste se for o primeiro valor (c == 0) ou n for maior do que o último valor da lista (lista[-1])
         lista.append(n)         # Adiciona n na última posição da lista

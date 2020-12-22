@@ -4,7 +4,7 @@
 listanum = []
 mai = 0
 men = 0
-for c in range(0, 5):
+for c in range(5):
         listanum.append(int(input(f'Digite um valor para posição {c}: ')))
         if c == 0:
                 mai = men = listanum[c]

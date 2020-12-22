@@ -8,10 +8,7 @@ def ficha(j='<desconhecido>', gol=0):
 #Programa Principal
 n = str(input('Nome do jogador: '))
 g = str(input('Número de gols: '))
-if g.isnumeric():
-    g = int(g)
-else:
-    g = 0
+g = int(g) if g.isnumeric() else 0
 if n.strip() == '':
     ficha(gol=g)
 else:

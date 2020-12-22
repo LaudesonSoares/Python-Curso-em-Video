@@ -13,10 +13,7 @@ while True:
     e = ' '
     while e not in 'PI':
         e = str(input('Par ou Impar? [P/I] ')).strip().upper()[0]
-    if (n+ec) % 2 == 0:
-        r = 'P'
-    else:
-        r = 'I'
+    r = 'P' if (n+ec) % 2 == 0 else 'I'
     if r == e == 'P':
         c += 1
         print('-'*30)
@@ -35,17 +32,13 @@ while True:
         print('-=-'*10)
     else:
         break
+print('-'*30)
 if r == 'P':
-    print('-'*30)
     print(f'O computador escolheu {ec} e você escolheu {n}. Total {ec + n}, deu PAR.')
-    print('-'*30)
-    print('VOCÊ PERDEU!')
-    print('-=-'*10)
-    print(f'GAME OVER! Você venceu {c} vezes.')
 else:
-    print('-'*30)
     print(f'O computador escolheu {ec} e você escolheu {n}. Total {ec + n}, deu ÍMPAR.')
-    print('-'*30)
-    print('VOCÊ PERDEU!')
-    print('-=-'*10)
-    print(f'GAME OVER! Você venceu {c} vezes.')
+
+print('-'*30)
+print('VOCÊ PERDEU!')
+print('-=-'*10)
+print(f'GAME OVER! Você venceu {c} vezes.')

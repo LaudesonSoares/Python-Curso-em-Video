@@ -3,14 +3,14 @@
 # B) Uma listagem com as pessoas mais pesadas.
 # C) Uma listagem com as pessoas mais leves.
 
-galera = list()
-dado = list()
+galera = []
+dado = []
 mai = men = 0
 
 while True:
     dado.append(str(input('Nome: ')))
     dado.append(int(input('Peso: ')))
-    if len(galera) == 0:
+    if not galera:
         mai = men = dado[1] #Item na posição 1 da lista dado
     else:
         if dado[1] > mai:

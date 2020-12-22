@@ -15,7 +15,7 @@ for k, v in jogo.items():
     sleep(1)
 print('-=' * 30)
 print('  == RANKING DOS JOGADORES ==')
-ranking = list()
+ranking = []
 ranking = sorted(jogo.items(), key=itemgetter(1), reverse=True) # Ordena o dicionário através da chave '1' (valor do dado) em ordem reversa do maior para menor
 for i, v in enumerate(ranking):
     print(f'{i+1}º lugar: {v[0]} com {v[1]}.')
