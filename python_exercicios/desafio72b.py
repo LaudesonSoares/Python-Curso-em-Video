@@ -8,13 +8,8 @@ while True:
     usunum = int(input('Digite um número entre 0 e 20: '))
     if 0 <= usunum <= 20:
         print(f'Você digitou o número {tupnum[usunum]}.')
-        seguir = str(input('Deseja continuar? [S/N] ')).strip().upper()
-        if seguir in 'SN':
-            if seguir == 'N':
-                break
     else:
         usunum = int(input('Tente novamente. Digite um número entre 0 e 20: '))
-        seguir = str(input('Deseja continuar? [S/N] ')).strip().upper()
-        if seguir in 'SN':
-            if seguir == 'N':
-                break
+    seguir = str(input('Deseja continuar? [S/N] ')).strip().upper()
+    if seguir in 'SN' and seguir == 'N':
+        break

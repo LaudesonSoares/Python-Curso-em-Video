@@ -7,9 +7,8 @@ lista = []
 while True:
     lista.append(int(input('Digite um valor: ')))
     r = str(input('Deseja continuar? [S/N] ')).upper().strip()
-    if r in 'SN':
-        if r == 'N':
-            break
+    if r in 'SN' and r == 'N':
+        break
 print(f'Foram digitados {len(lista)} números.')
 lista.sort(reverse=True)
 print(f'Os valores digitados foram {lista}')

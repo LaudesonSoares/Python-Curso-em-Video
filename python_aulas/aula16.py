@@ -52,7 +52,7 @@ print()
 # Note que para o loop baseado em ranges, é possível identificar a posição do elemento.
 
 print("Loop for com base em intervalos")
-for cont in range(0, len(lanche)):
+for cont in range(len(lanche)):
     print("Vou comer {}, salvo como elemento {}.".format(lanche[cont], cont))
 print("Granolei demais, meu BF aumentou para 107%.")
 print()

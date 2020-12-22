@@ -5,8 +5,8 @@
 # C) Uma lista com as mulheres
 # D) Uma lista de pessoas com idade acima da média
 
-galera = list()
-pessoa = dict()
+galera = []
+pessoa = {}
 soma = média = 0
 while True:
     pessoa.clear() #limpa o dicionário para inserir os novos dados

@@ -1,15 +1,15 @@
 # Aprimore o desafio 93 para que ele funcione com vários jogadores,
 # incluindo um sistema de visualização de detalhes do aproveitamento de cada jogador.
 
-time = list()
+time = []
 scout = {}
-gols = list()
+gols = []
 while True:
     scout.clear()
     scout['nome'] = str(input('Nome do Jogador: '))
     partidas = int(input(f'Quantas partidas {scout["nome"]} jogou? '))
     gols.clear()
-    for i in range(0, partidas):
+    for i in range(partidas):
         gols.append(int(input(f'Quantos gols na partida {i+1}? ')))
     scout['gols'] = gols[:]
     scout['total'] = sum(gols)
@@ -23,7 +23,7 @@ while True:
         break
 print('-='*30)
 print('cod ', end='')
-for i in scout.keys():
+for i in scout:
     print(f'{i:<15}', end='')
 print()
 print('-' * 40)

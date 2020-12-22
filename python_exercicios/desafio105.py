@@ -8,7 +8,7 @@
 #
 # Adicione também as docstrings dessa função para consulta pelo desenvolvedor.
 
-def notas (*n, sit=False):
+def notas(*n, sit=False):
     '''
     -> Função para analisar notas e situações de vários alunos.
     :param n: Uma ou mais notas dos alunos (aceita várias)
@@ -27,17 +27,18 @@ def notas (*n, sit=False):
             menor = valor
         cont +=1
     média = sum(n)/len(n)
-    if sit:
-        if média < 5:
-            situação = 'RUIM'
-        if 5 < média < 7:
-            situação = 'BOA'
-        else:
-            situação = 'ÓTIMO'
-        dados = {'Total': total, 'maior': maior, 'menor': menor, 'média': média, 'situação': situação}
-    else:
-        dados = {'Total': total, 'maior': maior, 'menor': menor, 'média': média}
-    return dados
+    if not sit:
+        return {'Total': total, 'maior': maior, 'menor': menor, 'média': média}
+    if média < 5:
+        situação = 'RUIM'
+    situação = 'BOA' if 5 < média < 7 else 'ÓTIMO'
+    return {
+        'Total': total,
+        'maior': maior,
+        'menor': menor,
+        'média': média,
+        'situação': situação,
+    }
 
 
 #Programa Principal
@@ -46,18 +47,17 @@ print(resp)
 
 #Resposta Guanabara --------------------------------------------------------------------------
 def notas(*n, sit=False):
-    r = dict()
-    r['total'] = len(n)
-    r['maior'] = max(n)
-    r['menor'] = min(n)
-    r['média'] = sum(n)/len(n)
+    r = {
+        'total': len(n),
+        'maior': max(n),
+        'menor': min(n),
+        'média': sum(n) / len(n),
+    }
+
     if sit:
         if r['média'] >= 7:
             r['situação'] = 'BOA'
-        if r['média'] >= 5:
-            r['situação'] = 'RAZOÁVEL'
-        else:
-            r['situação'] = 'RUIM'
+        r['situação'] = 'RAZOÁVEL' if r['média'] >= 5 else 'RUIM'
     return r
 
 #Programa Principal

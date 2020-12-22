@@ -1,21 +1,17 @@
 def aumentar(preço=0, taxa=0):
-    res = preço + (preço * taxa/100)
-    return res
+    return preço + (preço * taxa/100)
 
 
 def diminuir(preço=0, taxa=0):
-    res = preço - (preço * taxa/100)
-    return res
+    return preço - (preço * taxa/100)
 
 
 def dobro(preço=0):
-    res = preço * 2
-    return res
+    return preço * 2
 
 
 def metade(preço=0):
-    res = preço / 2
-    return res
+    return preço / 2
 
 
 def moeda(preço=0, moeda='R$'):

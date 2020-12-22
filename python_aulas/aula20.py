@@ -68,10 +68,8 @@ contador(4, 4, 7, 6, 2)
 
 #Empacotamento de Parâmetros (Lista)
 def dobra(lst):
-    pos = 0
-    while pos < len(lst):
+    for pos in range(len(lst)):
         lst[pos] *= 2
-        pos += 1
 
 
 valores = [6, 3, 9, 1, 0, 2]
@@ -79,9 +77,7 @@ dobra(valores)
 print(valores)
 
 def soma(* valores):
-    s = 0
-    for num in valores:
-        s += num
+    s = sum(valores)
     print(f'Somando os valores {valores} temos {s}')
 
 

@@ -6,9 +6,7 @@ print('-='*10)
 t = int(input('Digite o primeiro termo da PA: '))
 r = int(input('Digite a razão da PA: '))
 pa = t + r
-c = 1
-while c <= 10:
-    c += 1
+for _ in range(1, 11):
     print(pa, end=' ')
     pa += r
 print('Fim')

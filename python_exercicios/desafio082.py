@@ -6,19 +6,12 @@ valores = []
 while True:
     valores.append(int(input('Digite um número: ')))
     r = str(input('Deseja continuar? [S/N] ')).upper().strip()
-    if r in 'SN':
-        if r == 'N':
-            break
+    if r in 'SN' and r == 'N':
+        break
     if r not in 'SN':
         r = str(input('Deseja continuar? [S/N] ')).upper().strip()
 print(f'Os valores gerados foram {valores}.')
-par = []
-for v in valores:
-    if v % 2 == 0:
-        par.append(v)
+par = [v for v in valores if v % 2 == 0]
 print(f'Os valores pares são {par}.')
-impar = []
-for v in valores:
-    if v % 2 != 0:
-        impar.append(v)
+impar = [v for v in valores if v % 2 != 0]
 print(f'Os valores ímpares são {impar}.')

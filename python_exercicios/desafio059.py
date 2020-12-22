@@ -25,10 +25,7 @@ Que operação deseja executar? '''))
         print('O resultado da multiplicação {} x {} é {}.'.format(n1, n2, n1*n2))
         print('-==' * 15)
     elif op == 3:
-        if n1 > n2:
-            maior = n1
-        else:
-            maior = n2
+        maior = max(n1, n2)
         print('Entre {} e {} o maior é {}.'.format(n1, n2, maior))
     elif op == 4:
         print('Digite novos valores.')
